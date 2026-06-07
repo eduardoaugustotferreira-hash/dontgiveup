@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Don't Give Up - Principal</title>
+  <link rel="stylesheet" href="estilo1.css">
+</head>
+<body>
+
+  <div class="tela-principal">
+    <header>
+      <h2>Olá, <span id="nome-exibido"></span> 👋</h2>
+      <button onclick="sair()" class="btn-sair">Sair</button>
+    </header>
+
+    <!-- Renda Mensal -->
+    <section class="secao-renda">
+      <h3>Renda Mensal</h3>
+      <div class="campo-renda">
+        <span class="moeda">R$</span>
+        <input type="number" id="renda-mensal" placeholder="0,00" step="0.01">
+        <button onclick="salvarRenda()" class="btn-salvar">Salvar</button>
+      </div>
+    </section>
+
+    <!-- Despesas -->
+    <section class="secao-despesas">
+      <div class="cabecalho-secao">
+        <h3>Despesas Mensais</h3>
+        <button onclick="adicionarCartao()" class="btn-adicionar">+</button>
+      </div>
+
+      <div id="container-despesas" class="grade-despesas">
+        <!-- Cards serão carregados aqui -->
+      </div>
+    </section>
+  </div>
+
+  <script src="back.js"></script>
+</body>
+</html>
